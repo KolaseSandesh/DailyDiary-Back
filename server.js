@@ -4,7 +4,7 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-mongoose.connect(process.env.MONGODB_URI).then(
+mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopolgy : true, useNewUrlParser: true}).then(
   () => {
     console.log("Connected to db...");
   },
